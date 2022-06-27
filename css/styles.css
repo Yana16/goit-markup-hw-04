@@ -11,6 +11,7 @@
     --txt-secondery: #757575;
     --txt-logo: #2196F3;
     --txt-logo-black: #000000;
+    --social-link: #AFB1B8;
 
     /* bg color */
     --general-btn-cl:#2196F3;
@@ -47,6 +48,10 @@ body {
 .card-set-item {
     margin: calc(var(--indent) / 2);
     flex-basis: calc(100% - var(--indent) * var(--item) / var(--item));
+}
+.link {
+    text-decoration: none;
+    color: currentColor;
 }
 
 .canceled {
@@ -217,6 +222,16 @@ span.logo-white {
 .approach {
     padding: 94px;
 }
+.about-svg {
+    display: flex;
+    min-width: 270px;
+    min-height: 120px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--menu-btn-cl);
+    margin-bottom: 30px;
+    /* color: #757575; */
+}
 .approach-title {
     font-weight: 700;
     font-size: 14px;
@@ -263,12 +278,15 @@ span.logo-white {
     background: var(--txt-general-btn);
     border-radius: 4px;
     box-shadow: 0px 4px rgba(0, 0, 0, 0.25);
+    outline: 1px solid red;
 }
 .team-list {
     --item: 4;
+    outline: 1px solid red;
 }
 .member-list {
     padding: 30px 0px;
+    outline: 1px solid red;
 }
 .member-name {
     font-weight: 500;
@@ -278,6 +296,32 @@ span.logo-white {
     color: var(--txt-main);
     text-align: center;
     margin-bottom: 10px;
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.social-media-item:nth-child(n+2) {
+margin-left: 10px;
+}
+.social-media-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--social-link);
+}
+.social-media-link:hover,
+.social-media-link:focus {
+    background:var(--general-btn-cl);
+    color: var(--txt-general-btn);
+}
+.social-media-icon {
+    fill: currentColor;
 }
 
 .member-function {
