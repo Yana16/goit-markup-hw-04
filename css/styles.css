@@ -18,13 +18,18 @@
     --menu-btn-cl:#F5F4FA;
     --bg-hover-genbtn: #188CE8;
     --bg-order: #2F303A;
+    --bg-img-header: #C4C4C4;
 /* line color */
 --header-line: #ECECEC;
 --item-line: #EEEEEE;
+--border-line: #AFB1B8;
 
     /* constant */
     --item: 3;
     --indent: 30px;
+
+    /* gap*/
+    --gap-box: 30px;
 }
 body {
     font-family: var(--main-font);
@@ -137,7 +142,7 @@ span.logo-white {
     padding: 32px 0px;
 }
 .header-link:hover,
-.header-link:focus {
+.header-link:focus. {
     color: var(--txt-focus);
 }
 .header-group {
@@ -159,6 +164,17 @@ span.logo-white {
 .mailto:focus {
     color: var(--txt-focus);
 }
+.i-email,
+.i-tel {
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+/* .header-group:hover,
+.header-group:focus {
+    color: var(--txt-focus);
+} */
+
 .tel {
     font-weight: 500;
     font-size: 14px;
@@ -181,6 +197,12 @@ span.logo-white {
     background-color: var(--bg-order);
     padding: 200px 0px;
 }
+.order.overlay {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/filter/Img.jpg); background-color: var(--bg-img-header);
+}
 .order-title {
     font-size: 44px;
     line-height: 1.36;
@@ -188,7 +210,6 @@ span.logo-white {
     text-transform: uppercase;
     text-align: center;
     color: var(--txt-general-btn);
-    background-color: var(--bg-order);
     max-width: 650px;
     margin: 0 auto;
 }
@@ -206,6 +227,10 @@ span.logo-white {
     color: var(--txt-general-btn);
     padding: 10px 32px;
     align-items: center;
+    box-shadow: 1px 3px 4px rgb(0 0 0 / 20%);
+    border-style: none; 
+     
+}
 }
 .order-btn:hover,
 .order-btn:focus {
@@ -256,8 +281,9 @@ span.logo-white {
     padding-bottom: 94px;
 }
 .skills-title,
-.team-title {
-    font-style: 700;
+.team-title,
+.customer-title {
+    font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
@@ -273,20 +299,18 @@ span.logo-white {
 .team {
     background: var(--menu-btn-cl);
     padding: 94px 0px;
+    margin-bottom: 135px;
 }
 .team-member {
     background: var(--txt-general-btn);
     border-radius: 4px;
     box-shadow: 0px 4px rgba(0, 0, 0, 0.25);
-    outline: 1px solid red;
 }
 .team-list {
     --item: 4;
-    outline: 1px solid red;
 }
 .member-list {
     padding: 30px 0px;
-    outline: 1px solid red;
 }
 .member-name {
     font-weight: 500;
@@ -334,11 +358,44 @@ margin-left: 10px;
 }
 
 /* section team end */
+/* section customer start */
+.customer {
+    margin-bottom: 94px;
+}
+.customer-list {
+    display: flex;
+}
+.customer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 92px;
+    width: 170px;
+    border: 1px solid var(--border-line);
+    border-radius: 4px;
+    color: var(--border-line);
+}
+.customer-svg {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+}
+.customer-title {
+    padding-bottom: 50px;
+}
+.customer-item:nth-child(n+2) {
+    margin-left:var(--gap-box);
+}
 
+
+/* section customer end */
 /* footer start */
 .footer {
     background-color: var(--bg-order);
     padding: 60px 0px;
+}
+.footer .container {
+    display: flex;
 }
 
 .address-box {
@@ -367,7 +424,44 @@ margin-left: 10px;
     width: max-content;
     color: var(--txt-mail-footer);
 }
+.footer-links {
+    margin-left: 70px;
+    padding-top: 15px;
+}
+.footer-title {
+   text-transform: uppercase;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 1.14;
+   letter-spacing: 0.03em;
+   color:var(--txt-general-btn);
+   margin-bottom: 20px;
+}
+.footer-social {
+    display: flex;
+}
+.fsocial-link {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 44px;
+width: 44px;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.1);
+box-shadow: rgba(0, 0, 0, 0.25);
+}
+.flink-icon {
+    fill: var(--txt-general-btn);
+}
+.fsocial-link:hover,
+.fsocial-link:focus {
+    background-color: var(--general-btn-cl);
+    color:var(--txt-general-btn);
+}
+.fsocial-list:nth-child(n+2) {
+    margin-left: 10px;
 
+}
 /* footer end */
 
 /* portfolio filter start */
