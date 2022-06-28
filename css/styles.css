@@ -153,6 +153,8 @@ span.logo-white {
     display: flex;
 }
 .mailto {
+    display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -176,6 +178,8 @@ span.logo-white {
 } */
 
 .tel {
+    display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -386,6 +390,11 @@ margin-left: 10px;
 .customer-item:nth-child(n+2) {
     margin-left:var(--gap-box);
 }
+.customer-link:hover,
+.customer-link:focus {
+    border: 1px solid var(--general-btn-cl);
+    color: var(--general-btn-cl);
+}
 
 
 /* section customer end */
@@ -470,7 +479,7 @@ box-shadow: rgba(0, 0, 0, 0.25);
 display: none;
 }
 .filter {
-    padding: 94px;
+    padding: 94px 0px;
 }
 
 .filter-list {
@@ -516,6 +525,11 @@ display: none;
 .menu-item {
     outline: 1px solid var(--item-line);
     border-radius: 4px;
+}
+.menu-item:hover,
+.menu-item:focus {
+    box-shadow: 6px 1px 4px rgba(0, 0, 0, 0.16), 4px
+    0px 4px rgba(0, 0, 0, 0.06), 1px 0px 1px rgba(0, 0, 0, 0.12);
 }
 .block-list {
     padding: 20px 24px;
